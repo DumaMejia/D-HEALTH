@@ -3,256 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D-Health</title>
+    <title>Login D-Health</title>
     <!-- Styles -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+     <!-- JavaScript -->
+    <script src="alertify.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/alertify.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="css/themes/default.min.css"/>
+    <!-- Semantic UI theme -->
+    <link rel="stylesheet" href="css/themes/semantic.min.css"/>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="css/themes/bootstrap.min.css"/>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"> <img alt="" src="images/Imagen3.png" width="130" height="50"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Funciones
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Bandeja de entrada</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Diagnostico</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Aula Virtual</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Contactanos</a>
-              </li>              
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-secondary" type="submit">Buscar</button>
-            </form>
-          </div>
-        </div>
-      </nav>
-      <!-- CONTENIDO -->
-      <div class="container">
-        <div class="row">
-            <div class="container" style="width: 400px; height: 650px; ">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div>
+                    <div class="row mb-3"><img alt="" src="images/Imagen3.png" width="400" height="150"></div>
+                    <div class="card-body">
+                        
+                    
     
-              <h5 class="card-title">Noticias</h5>
+                            <div class="row mb-3">
+                                <label  class="col-md-4 col-form-label text-md-end">Correo</label>
     
-              <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
+                                <div class="col-md-6">
+                                    <input id="email" type="email" class="form-control" name="email" value="" required autocomplete="email" autofocus>
+                                </div>
+                            </div>
     
-              <div class="card text-center" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
+                            <div class="row mb-3">
+                                <label  class="col-md-4 col-form-label text-md-end">contraseña</label>
     
-              <div class="card text-end" style="width: 18rem;">
-                <div class="card-body">
-                  <h5 class="card-title">Special title treatment</h5>
-                  <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
-              </div>
-            </div>
+                                <div class="col-md-6">
+                                    <input id="password" type="password" class="form-control" value="" name="password" required autocomplete="current-password">
+                                </div>
+                            </div>
     
-            <div class="container" style="width: 200px; height: 500px;" >
+                            <div class="row mb-3">
+                                <div class="col-md-6 offset-md-4">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
     
+                                        <label class="form-check-label" for="remember">
+                                            Recordar contraseña
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
     
-            </div>
+                            <div class="row mb-0">
+                                <div class="col-md-8 offset-md-4">
+                                    <button  onclick= login() class="btn btn-success text-white">
+                                        Iniciar Sesion
+                                    </button>
     
-            <div class="container" style="width: 200px; height: 500px;" >
+                                    O
     
-             <h5 class="card-title">Recordatorios</h5>
+                                    <a>
+                                            <button type="button" class="btn btn-outline-primary">
+                                                <em class="fa fa-google mr-2"></em>
+                                                <img alt="" src="images/google1.png" width="20" height="20">
+                                                Iniciar sesion con google
+                                            </button>
+                                        </a>
     
-                <table class="table">
-                  <thead>
-                    <tr>
-                      <th scope="col">#</th>
-                      <th scope="col">Enfermedad</th>
-                      <th scope="col">Anotacion</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr  v-for="item in productos" :key="item.idProducto">
-                      <th scope="row">1</th>
-                      <td>{{item.nombre}}</td>
-                      <td>{{item.precioe}}</td>
-                    </tr>
-                  </tbody>
-                </table>
-    
-                <h5 class="card-title">Notificaciones</h5>
-    
-                <ol class="list-group list-group-numbered">
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Subheading</div>
-                      Cras justo odio
+                                   
+                                        <a class="btn btn-link">
+                                            ¿Olvidaste la contraseña?
+                                        </a>
+                                   
+                                    <a class="btn btn-link" >
+                                            Registrarse
+                                        </a>
+                                    
+                                </div>
+                            </div>
+                        
                     </div>
-                    <span class="badge bg-primary rounded-pill">14</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Subheading</div>
-                      Cras justo odio
-                    </div>
-                    <span class="badge bg-primary rounded-pill">14</span>
-                  </li>
-                  <li class="list-group-item d-flex justify-content-between align-items-start">
-                    <div class="ms-2 me-auto">
-                      <div class="fw-bold">Subheading</div>
-                      Cras justo odio
-                    </div>
-                    <span class="badge bg-primary rounded-pill">14</span>
-                  </li>
-                </ol>
+                </div>
             </div>
-          </div>
-      </div>
-      <!-- CONTENIDO -->
-     <!-- Footer -->
-    <footer class="text-center text-lg-start bg-light text-muted">
-        <!-- Section: Social media -->
-        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-        <!-- Left -->
-        <div class="me-5 d-none d-lg-block">
-            <span>Sigue en contacto con nosotros:</span>
         </div>
-        <!-- Left -->
+    </div>
+<script>
     
-        <!-- Right -->
-        <div>
-            <a href="" class="me-4 text-reset">
-            <i class="fab fa-facebook-f"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-            <i class="fab fa-twitter"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-            <i class="fab fa-google"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-            <i class="fab fa-instagram"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-            <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="" class="me-4 text-reset">
-            <i class="fab fa-github"></i>
-            </a>
-        </div>
-        <!-- Right -->
-        </section>
-        <!-- Section: Social media -->
-    
-        <!-- Section: Links  -->
-        <section class="">
-        <div class="container text-center text-md-start mt-5">
-            <!-- Grid row -->
-            <div class="row mt-3">
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                <!-- Content -->
-                <h6 class="text-uppercase fw-bold mb-4">
-                <i class="fas fa-gem me-3"></i>D-Health
-                </h6>
-                <p>
-                Esperamos que su experiencia en D-Health sea grata y de utlidad.
-                aqui te dejamos unos enlaces que pueden resultarte utiles.
-                tambien tienes  nuestros contactos por si buscas ayuda.
-                </p>
-            </div>
-            <!-- Grid column -->
-    
-            <!-- Grid column -->
-            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold mb-4">
-                Ventanas
-                </h6>
-                <p>
-                <a href="#!" class="text-reset">Inicio</a>
-                </p>
-                <p>
-                <a href="#!"  class="text-reset">Enfermedades y medicamentos</a>
-                </p>
-            
-            </div>
-            <!-- Grid column -->
-    
-            <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold mb-4">
-                Enlaces Utiles
-                </h6>
-                <p>
-                <a href="" class="text-reset">ENLACE 1</a>
-                </p>
-                <p>
-                <a href="" class="text-reset">ENLACE 2</a>
-                </p>
-                <p>
-                <a href="" class="text-reset">ENLACE 3</a>
-                </p>
-                
-            </div>
-            <!-- Grid column -->
-    
-            <!-- Grid column -->
-            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                <!-- Links -->
-                <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
-                <p><i class="fas fa-home me-3"></i> Usulutan, Usulutan, SV</p>
-                <p>
-                <i class="fas fa-envelope me-3"></i>
-                dhealth@info.com
-                </p>
-                <p><i class="fas fa-phone me-3"></i> + 503 7209-9091</p>
-                <p><i class="fas fa-print me-3"></i> + 503 2626-6767</p>
-            </div>
-            <!-- Grid column -->
-            </div>
-            <!-- Grid row -->
-        </div>
-        </section>
-        <!-- Section: Links  -->
-    
-        <!-- Copyright -->
-        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-        © 2022 Copyright:
-        <a class="text-reset fw-bold" href="">D-Health</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
+    function login(){
+
+       
+        
+      
+      
+
+       if(document.getElementById("email").value == "prueba@prueba.com" && document.getElementById("password").value == "prueba"){
+
+        location.href = 'inicio.html';
+
+       }else{
+        alertify.error("Correo o contraseña incorrecta");
+       };
+
+    };
+</script>
 </body>
 </html>

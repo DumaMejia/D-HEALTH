@@ -1,0 +1,25 @@
+table.scroll {
+    width: 780px; /* 140px * 5 column + 16px scrollbar width */
+    
+}
+
+table.scroll tbody,
+table.scroll thead tr { display: block; }
+
+table.scroll tbody {
+    height: 155px;
+    overflow-y: auto;
+    overflow-x: scroll;
+}
+
+table.scroll tbody td{
+    width: 700px;
+    
+}
+table.scroll thead th {
+    width: 500px;
+    
+}
+
+
+

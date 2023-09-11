@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enfermedades Y medicamentos</title>
+     <!-- Styles -->
+     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+      <!-- JavaScript -->
+      <script src="alertify.min.js"></script>
+ 
+      <!-- CSS -->
+      <link rel="stylesheet" href="css/alertify.min.css"/>
+      <!-- Default theme -->
+      <link rel="stylesheet" href="css/themes/default.min.css"/>
+      <!-- Semantic UI theme -->
+      <link rel="stylesheet" href="css/themes/semantic.min.css"/>
+      <!-- Bootstrap theme -->
+      <link rel="stylesheet" href="css/themes/bootstrap.min.css"/>
+      <!--CSS-->
+      <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#"> <img alt="" src="images/Imagen3.png" width="130" height="50"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="inicio.html">Inicio</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Funciones
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Enfermedades y medicamentos</a></li>
+                  <li><a class="dropdown-item" href="#">Enciclopedia</a></li>
+                  <li><a class="dropdown-item" href="#">Alimentacion Saludable</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Bandeja de entrada</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Diagnostico</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Aula Virtual</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Contactanos</a>
+              </li>              
+            </ul>
+            <form>
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Usuario
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Configuracion</a></li>
+                    <li><a class="dropdown-item" href="#">Mi Perfil</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="index.html">Cerrar Sesion</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </form>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-secondary" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+<!-- contenido -->
+      <div id="appProducto">
+        <div class="card">
+        
+        </div>
+        
+
+        
+            <div class="card text-dark bg-light mb-3">
+                
+                <form  id="frmMaterias" >
+                    <div class="row p-1">
+                        <div class="card" style="width: 700px; height: 550px;">
+                    
+
+                        <div class="row p-3">
+                        <div class="col col-md-3">Codigo:</div>
+                        <div class="col col-md-3">
+                            <input disabled title="Ingrese el nombre"  required type="text" class="form-control" style="width : 300px">
+                        </div>
+                        </div>
+
+                        <div class="row p-3">
+                                <div class="col col-md-3">Enfermedad:</div>
+                                <div class="col col-md-3">
+                                    <select  class="form-select" aria-label=".form-select-sm example" style="width : 300px">
+                                        <option  selected>Selecciona Tipo de Enfermedad</option>
+                                        <option value=2>Hepatitis C</option>
+                                        <option value=4>Depresion Aguda</option>
+                                      </select>
+                                </div>
+                            </div>
+
+                        <div class="row p-3">
+                                <div class="col col-md-3">Medicamento:</div>
+                                <div class="col col-md-3">
+                                    <select  class="form-select" aria-label=".form-select-sm example" style="width : 300px">
+                                        <option  selected>Selecciona Medicamento</option>
+                                        <option value=2>Exoprol CA</option>
+                                        <option value=4>Lithium</option>
+                                      </select>
+                                </div>
+                            </div>
+
+                        <div class="row p-3" >
+                            <div   visibility="hidden" class="col col-md-3">Recordatorio:</div>
+                            <div class="col col-md-3">
+                                <select  v-model="producto.precio" class="form-select" aria-label=".form-select-sm example" style="width : 300px">
+                                    <option  selected>Selecciona intervalo</option>
+                                    <option value=2>2 horas</option>
+                                    <option value=4>4 horas</option>
+                                    <option value=6>6 horas</option>
+                                    <option value=8>8 horas</option>
+                                    <option value=10>10 horas</option>
+                                    <option value=12>12 horas</option>
+                                    <option value=24>24 horas</option>
+                                  </select>
+                            </div> 
+                        </div>
+
+                        <div class="row p-3">
+                        <div class="col col-md-3">Anotaciones:</div>
+                        <div class="col col-md-3">
+                            <textarea title="Ingrese el nombre"  placeholder="Observaciones/Anotaciones" type="text"  class="form-control" style="width : 300px"></textarea>
+                        </div>
+                        </div>
+
+                       
+                        
+                        
+
+                        <div class="row p-3">
+                            <div class="col col-md-3" >
+                            <input class="btn btn-secondary" type="reset" value="Nuevo">
+                        </div>
+                        <div class="col col-md-3" >
+                            
+                            <input class="btn btn-success" type="submit" value="Guardar">
+                        </div>
+                        </div>
+                    </div>
+
+                        <div class="container m-3" id="map" style="width: 500px; height: 500px;" >
+                        
+
+
+
+                            <div class="card-body">
+                                <table class="table table-light table-striped table-striped scroll" id="tabla">
+                                     <thead>
+                                        <tr>
+                                            <th colspan="8">
+                                            
+                                                <div class="col col-md-12"  id="res2" >Resultados: </div>
+                                            </th>
+                                        </tr>
+                                
+                                         <tr>
+                                            <th>Codigo</th>
+                                            <th>Enfermedad</th>
+                                            <th>Medicamento</th>
+                                            <th>Recordatorio</th>
+                                
+                                         </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr  v-for="item in productos" :key="item.idProducto">
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td></td>
+                                            <td>
+                                            
+                                            <button type="button" class="btn btn-danger" >Eliminar</button>
+                                            <button type="button" class="btn btn-success" >Modificar</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Fecha</h5>
+                                            <legend id="fecha" class="card-text"></legend>
+                                            
+                                        </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Hora</h5>
+                                            <legend id="hora" class="card-text"></legend>
+                                            
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <table class="table table-striped scroll">
+                                    <thead>
+                                        <tr >
+                                        <th scope="col">#</th>
+                                        <th scope="col">Anotacion</th>
+                                        <th scope="col">hora</th>
+                                        <th scope="col">enfermedad</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr  v-for="item in medi" :key="item.nombre">
+                                        <th scope="row">1</th>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                            </div>
+
+                     
+                     
+                    
+                        
+                        
+                        </div>
+
+                        
+                    
+                    </div>
+            </form>
+        </div>
+    
+         <!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>Sigue en contacto con nosotros:</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>D-Health
+          </h6>
+          <p>
+            Esperamos que su experiencia en D-Health sea grata y de utlidad.
+            aqui te dejamos unos enlaces que pueden resultarte utiles.
+            tambien tienes  nuestros contactos por si buscas ayuda.
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Ventanas
+          </h6>
+          <p>
+            <a href="#!" class="text-reset">Inicio</a>
+          </p>
+          <p>
+            <a href="#!"  class="text-reset">Enfermedades y medicamentos</a>
+          </p>
+         
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Enlaces Utiles
+          </h6>
+          <p>
+            <a href="" class="text-reset">ENLACE 1</a>
+          </p>
+          <p>
+            <a href="" class="text-reset">ENLACE 2</a>
+          </p>
+          <p>
+            <a href="" class="text-reset">ENLACE 3</a>
+          </p>
+          
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Contacto</h6>
+          <p><i class="fas fa-home me-3"></i> Usulutan, Usulutan, SV</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i>
+            dhealth@info.com
+          </p>
+          <p><i class="fas fa-phone me-3"></i> + 503 7209-9091</p>
+          <p><i class="fas fa-print me-3"></i> + 503 2626-6767</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2022 Copyright:
+    <a class="text-reset fw-bold" href="">D-Health</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+</div>
+<script>
+    window.onload = function cronometro(){
+
+        setInterval(()=>{
+                 let  tiempo = new Date();
+                 tiempo = tiempo.toLocaleTimeString();
+                 document.getElementById('hora').innerText = tiempo;
+                 this.hora = tiempo;
+                }, 1000);
+                
+                setInterval(()=>{
+                 let  fecha = new Date();
+                 fecha = fecha.toLocaleDateString();
+                 document.getElementById('fecha').innerText = fecha;
+                }, 1000);  
+
+    };
+
+
+    function init(){
+
+        setInterval(this.Build, 1000);
+        
+    };
+    
+</script>
+</body>
+</html>
